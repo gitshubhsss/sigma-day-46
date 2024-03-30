@@ -1,21 +1,24 @@
-let inp=document.querySelector('input');
-let btn=document.querySelector('button');
-let taskList=document.querySelector('.taskList')
-btn.addEventListener("click",()=>{
-    let ul=document.createElement('ul');
-    let li=document.createElement('li');
-    let delbtn=document.createElement('button');
-    delbtn.innerText="delete";
+let inp = document.querySelector("input");
+let btn = document.querySelector("button");
+let ul = document.querySelector("ul");
+let taskList = document.querySelector(".taskList");
+let delbtn = document.querySelector(".delBtn");
 
-    li.innerText=inp.value;
-    li.appendChild(delbtn);
-    ul.appendChild(li);
-    taskList.appendChild(ul)
+btn.addEventListener("click", () => {
+  let li = document.createElement("li");
+  let delbtn = document.createElement("button");
+  delbtn.innerText = "delete";
+  li.innerText = inp.value;
+  li.appendChild(delbtn);
+  ul.appendChild(li);
+  inp.value = "";
+});
 
-    inp.value="";
-
-    delbtn.addEventListener("click",()=>{
-        delbtn.parentElement.remove();
-    })
-
-})
+ul.addEventListener("click", (event) => {
+  if(event.target.nodeName=="BUTTON"){
+    event.target.parentElement.remove();
+  }
+  else{
+    console.log("do not delete");
+  }
+});
