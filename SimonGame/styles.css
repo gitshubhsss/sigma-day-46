@@ -2,7 +2,7 @@ h1{
     text-align: center;
     font-size: 40px;
 }
-h3{
+h2,h3{
     text-align: center;
 }
 p{
@@ -24,7 +24,7 @@ p{
     background-color: lightgray;
   }
   
-  .circle {
+  .btn{
     position: absolute;
     width: 120px;
     height: 120px;
@@ -46,7 +46,12 @@ p{
     left: 50%;
     transform: translateX(-50%);
   }
-  
+  .blue {
+    background-color: blue;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
   .yellow {
     background-color: yellow;
     top: 50%;
@@ -54,10 +59,10 @@ p{
     transform: translateY(-50%);
   }
   
-  .blue {
-    background-color: blue;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-  }
   
+  .flashColor{
+    background-color: white;
+  }
+  .userFlash{
+    background-color: darkcyan;
+  }
